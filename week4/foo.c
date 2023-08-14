@@ -12,7 +12,7 @@ int main (int argc, char *argv[])
     }
     else
     {
-        printf("The command has no other arguments.\n")
+        printf("The command has no other arguments.\n");
     }
     return 0;
 }

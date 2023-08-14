@@ -1,6 +1,9 @@
 # include <stdio.h>
 
 int main (int argc, char *argv[]){
+    FILE *fp;
+    char *filename;
+    char ch;
     if (argc < 2){
         printf("Missing Filename\n");
         return (1);

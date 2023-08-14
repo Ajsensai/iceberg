@@ -2,7 +2,7 @@
 
 int main (int argc, char *argv[])
 {
-    int count;
+    int i;
     printf ("This was called with \"%s\".\n", argv[0]);
     if (argc > 1)
     {

@@ -1,18 +1,23 @@
 # include <stdio.h>
 
-int main (int argc, char *argv[])
-{
-    int i;
-    printf ("This was called with \"%s\".\n", argv[0]);
-    if (argc > 1)
-    {
-        for (i=1; i<argc; i++){
-            printf("argv[%d] = %s\n", i, argv[i]);
+int main (int argc, char *argv[]){
+    if (argc < 2){
+        printf("Missing Filename\n");
+        return (1);
+    }
+    else{
+        filename = argv[1];
+        printf("Filename: %s\n", filename);
+    }
+    fp = fopen(filename,"r");
+    if (fp){
+        printf("File contents:\n");
+        while ( (ch - fgetc(fp)) != EOF){
+            printf("%c", ch);
         }
     }
-    else
-    {
-        printf("The command has no other arguments.\n");
+    else{
+        printf("Failed to open the file\n");
     }
-    return 0;
+    return(0);
 }

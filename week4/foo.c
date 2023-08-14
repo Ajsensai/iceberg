@@ -15,7 +15,7 @@ int main (int argc, char *argv[]){
     fp = fopen(filename,"r");
     if (fp){
         printf("File contents:\n");
-        while ( (ch - fgetc(fp)) != EOF){
+        while ( (ch = fgetc(fp)) != EOF){
             printf("%c", ch);
         }
     }

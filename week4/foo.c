@@ -7,10 +7,10 @@ int usage(){
 
 void upperLower(char *option, char *text){
     while (*text != '\0'){
-        if (*option == '-u'){
+        if (*option == 'u'){
             *text = (*text >= 'a' && *text <= 'z') ? (*text - 'a' + 'A') : *text;
         }
-        else if (*option == '-l'){
+        else if (*option == 'l'){
             *text = (*text >= 'A' && *text <= 'Z') ? (*text - 'A' + 'a') : *text;
         }
         text++;

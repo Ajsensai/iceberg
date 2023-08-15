@@ -1,15 +1,15 @@
 # include <stdio.h>
 
 int usage(){
-    printf("Syntax: ./program filename -u\n")\
-    printf("Arguments:\n -u Upper\n -l Lower\n")
+    printf("Syntax: ./program filename -u\n");
+    printf("Arguments:\n -u Upper\n -l Lower\n");
 }
 
 int main (int argc, char *argv[]){
     FILE *fp;
     char *filename;
     char ch;
-    char case;
+    char *case;
     if (argc < 3){
         if (argc < 2){
             printf("Missing Filename\n");

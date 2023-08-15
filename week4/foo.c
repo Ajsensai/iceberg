@@ -8,7 +8,7 @@ int usage(){
 int main (int argc, char *argv[]){
     FILE *fp;
     char *filename;
-    char *case;
+    char *upperLower;
     char ch;
     if (argc < 3){
         if (argc < 2){
@@ -24,9 +24,9 @@ int main (int argc, char *argv[]){
     }
     else{
         filename = argv[1];
-        case = argv[2];
+        *upperLower = argv[2];
         printf("Filename: %s\n", filename);
-        printf("Upper/Lower: %s\n", case);
+        printf("Upper/Lower: %s\n", upperLower);
 
     }
     fp = fopen(filename,"r");

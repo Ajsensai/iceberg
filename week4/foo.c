@@ -8,8 +8,8 @@ int usage(){
 int main (int argc, char *argv[]){
     FILE *fp;
     char *filename;
+    char *case;
     char ch;
-    // char *case;
     if (argc < 3){
         if (argc < 2){
             printf("Missing Filename\n");
@@ -17,16 +17,16 @@ int main (int argc, char *argv[]){
             return (1);
         }
         else{
-            printf("Missing -u or -l");\
+            printf("Missing -u or -l\n");\
             usage();
             return (1);
         }
     }
     else{
         filename = argv[1];
-        // case = argv[2];
+        case = argv[2];
         printf("Filename: %s\n", filename);
-        // printf("Upper/Lower: %s\n", case);
+        printf("Upper/Lower: %s\n", case);
 
     }
     fp = fopen(filename,"r");

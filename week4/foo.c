@@ -17,6 +17,6 @@ int main (int argc, char *argv[]){
         printf("File not found: %s\n", filename);
         return 1;
     }
-    printf("And?....")
+    printf("And?....");
     return 0;
 }

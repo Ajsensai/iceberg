@@ -6,38 +6,17 @@ int usage(){
 }
 
 int main (int argc, char *argv[]){
-    FILE *fp;
-    char *filename;
-    char upperLower;
-    char ch;
-    if (argc < 3){
-        if (argc < 2){
-            printf("Missing Filename\n");
-            usage();
-            return (1);
-        }
-        else{
-            printf("Missing -u or -l\n");\
-            usage();
-            return (1);
-        }
+    if (argc != 3){
+        usage();
+        return 1;
     }
-    else{
-        filename = argv[1];
-        *upperLower = argv[2];
-        printf("Filename: %s\n", filename);
-        printf("Upper/Lower: %s\n", upperLower);
-
+    char *option = argv[2];
+    char *filename = argv[2];
+    FILE *file = fopen(filename, "r");
+    if (file == NULL){
+        printf("File not found: %s\n", filename);
+        return 1;
     }
-    fp = fopen(filename,"r");
-    if (fp){
-        printf("File contents:\n");
-        while ( (ch = fgetc(fp)) != EOF){
-            printf("%c", ch);
-        }
-    }
-    else{
-        printf("Failed to open the file\n");
-    }
-    return(0);
+    printf("And?....")
+    return 0;
 }

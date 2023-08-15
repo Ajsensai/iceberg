@@ -11,7 +11,7 @@ int main (int argc, char *argv[]){
         return 1;
     }
     char *option = argv[2];
-    char *filename = argv[2];
+    char *filename = argv[1];
     FILE *file = fopen(filename, "r");
     if (file == NULL){
         printf("File not found: %s\n", filename);

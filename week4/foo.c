@@ -8,7 +8,7 @@ int usage(){
 int main (int argc, char *argv[]){
     FILE *fp;
     char *filename;
-    char *upperLower;
+    char upperLower;
     char ch;
     if (argc < 3){
         if (argc < 2){

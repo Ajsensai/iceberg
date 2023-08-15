@@ -33,17 +33,12 @@ int main (int argc, char *argv[]){
     fseek(file, 0, SEEK_END);
     long file_size = ftell(file);
     fseek(file, 0, SEEK_SET);
-    char *text = (char *)malloc(file_size + 1);
-    if (text == NULL){
-        printf("Memory allocation error. \n");
-        fclose(file);
-        return 1;
-    }
+    char text[file_size + 1];
     fread(text, 1, file_size, file);
     text[file_size] = '\0';
     fclose(file);
     upperLower(option, text);
     printf("%s\n", text);
-    free(text);
+
     return 0;
 }

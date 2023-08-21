@@ -29,7 +29,7 @@ static int a[ASIZE] = { 1, 3, 8, 7, 2, 4, 6, 5, 9, 0 };
 int main (int argc, char *argv[]){
     int j;
     // print the array bfore sorting
-    for (j = 0; j < ASIZE, j++)
+    for (j = 0; j < ASIZE; j++)
         printf("%d ", a[j]);
         printf("\n");
     // Sort the arror

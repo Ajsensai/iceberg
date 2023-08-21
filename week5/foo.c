@@ -26,9 +26,6 @@ static int cmpints(const void *p1, const void *p2)
 
 # define ASIZE 10
 static int a[ASIZE] = { 1, 3, 8, 7, 2, 4, 6, 5, 9, 0 };
-// printf("Please enter a line:\n")
-// ASIZE = getline(&line, &len, stdin);
-// printf("You entered %s, which has %zu chars.\n", line, ASIZE -1);
 // Modify the program, so that it reads an arbitrary number of integers from stdin until the user
 // enters either EOF (Ctrl-D) or invalid input. These numbers should be stored in an array with
 // dynamically allocated memory instead of a static array.
@@ -37,14 +34,15 @@ static int a[ASIZE] = { 1, 3, 8, 7, 2, 4, 6, 5, 9, 0 };
 
 int main (int argc, char *argv[]){
     int j;
+    // -------------
+    int intArray = (int)malloc(sizeof(int) * ASIZE);
+    for (int i = 0;i<ASIZE;i++){
+        printf("Please enter number %d: ",i);
+        scanf("%d",&(intArray[i]));
+        printf("\n");
+    }
+    // -------------
     // print the array bfore sorting
-    // -------------
-    char a[100];
-    fprintf(stdin, "Enter a string :");
-    fscanf(stdin,"%s", a);
-    fprintf(stdout,"\nYou entered the following string: %s ", a);
-    fprintf(stdout,"\n");
-    // -------------
     for (j = 0; j < ASIZE; j++)
         printf("%d ", a[j]);
         printf("\n");

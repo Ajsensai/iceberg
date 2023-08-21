@@ -44,13 +44,13 @@ int main (int argc, char *argv[]){
     // -------------
     // print the array bfore sorting
     for (j = 0; j < ASIZE; j++)
-        printf("%d ", a[j]);
+        printf("%d ", intArray[j]);
         printf("\n");
     // Sort the arror
-    qsort(a, ASIZE, sizeof(int), cmpints);
+    qsort(intArray, ASIZE, sizeof(int), cmpints);
     // Print the array after sorting
     for(j = 0; j < ASIZE; j++)
-        printf("%d ", a[j]);
+        printf("%d ", intArray[j]);
         printf("\n");
     return 0;
 }

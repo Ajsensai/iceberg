@@ -39,7 +39,7 @@ int main (int argc, char *argv[]){
     int j;
     // print the array bfore sorting
     // -------------
-    int a[100];
+    char a[100];
    fprintf(stdin, "Enter a string :");
    fscanf(stdin,"%d", a);
    fprintf(stdout,"\nYou entered the following string: %s ", a);

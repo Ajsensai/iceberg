@@ -40,10 +40,10 @@ int main (int argc, char *argv[]){
     // print the array bfore sorting
     // -------------
     char a[100];
-   fprintf(stdin, "Enter a string :");
-   fscanf(stdin,"%d", a);
-   fprintf(stdout,"\nYou entered the following string: %s ", a);
-   fprintf(stdout,"\n");
+    fprintf(stdin, "Enter a string :");
+    fscanf(stdin,"%s", a);
+    fprintf(stdout,"\nYou entered the following string: %s ", a);
+    fprintf(stdout,"\n");
     // -------------
     for (j = 0; j < ASIZE; j++)
         printf("%d ", a[j]);

@@ -25,7 +25,6 @@ static int cmpints(const void *p1, const void *p2)
 }
 # define ASIZE 10
 static int a[ASIZE] = { 1, 3, 8, 7, 2, 4, 6, 5, 9, 0 };
-int
 
 int main (int argc, char *argv[]){
     int j;

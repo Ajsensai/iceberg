@@ -36,14 +36,14 @@ int main (int argc, char *argv[]){
     int j;
     int m = 10; //How much is allocated
     int n = 0; //How much is used
-    int *a = (int *)malloc(m * sizeof(int)) // Allocate 40 bytes
+    int *a = (int *)malloc(m * sizeof(int)); // Allocate 40 bytes
     int x; // The number we read into (when we scanf)
 
-    printf("Enter numbers (ctrl + D to finish):\n")
+    printf("Enter numbers (ctrl + D to finish):\n");
     while (1==scanf("%d", &x)){
         if(n>=m){ // Re-alllcate memory until ctrl + d
             m = m+10;
-            a = realloc(a, m*sizeof(int))
+            a = realloc(a, m*sizeof(int));
         }
         a[n] = x;
         n++;
@@ -51,7 +51,7 @@ int main (int argc, char *argv[]){
     for (j = 0; j < n; j++) // print the array bfore sorting
         printf("%d ", a[j]);
         printf("\n");
-    qsort(a, n sizeof(int), cmpints); // Sort the array
+    qsort(a, n, sizeof(int), cmpints); // Sort the array
     for(j = 0; j < n; j++) // Print the array after sorting
         printf("%d ", a[j]);
         printf("\n");

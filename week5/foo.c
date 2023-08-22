@@ -35,7 +35,7 @@ static int a[ASIZE] = { 1, 3, 8, 7, 2, 4, 6, 5, 9, 0 };
 int main (int argc, char *argv[]){
     int j;
     // -------------
-    int intArray = (int *)malloc(sizeof(int) * ASIZE);
+    int *intArray = (int *)malloc(sizeof(int) * ASIZE);
     for (int i = 0;i<ASIZE;i++){
         printf("Please enter number %d: ",i);
         scanf("%d",&(intArray[i]));

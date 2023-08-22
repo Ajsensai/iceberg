@@ -39,6 +39,7 @@ int main (int argc, char *argv[]){
     int *a = (int *)malloc(m * sizeof(int)) // Allocate 40 bytes
     int x; // The number we read into (when we scanf)
 
+    printf("Enter numbers (ctrl + D to finish):\n")
     while (1==scanf("%d", &x)){
         if(n>=m){ // Re-alllcate memory until ctrl + d
             m = m+10;
